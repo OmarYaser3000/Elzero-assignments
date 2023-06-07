@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page {
+            width: 1000px;
+            height: 500px;
+            margin: auto;
+            padding: 10px;
+            font-family: sans-serif;
+            background-color: #eeeeee;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 15%;
+            background-color: #dadada;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .links {
+            width: 80%;
+            margin: 0;
+            background-color: #dadada;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .links li {
+            list-style: none;
+            margin: 10px;
+        }
+
+        .main-area {
+            display: flex;
+            justify-content: space-between;
+            height: 80%;
+        }
+
+        .content {
+            width: 70%;
+            background-color: #dadada;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 28%;
+            background-color: #dadada;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            background-color: #dadada;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="logo">Logo</div>
+            <ul class="links">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="main-area">
+            <div class="content">Content</div>
+            <div class="sidebar">Sidebar</div>
+        </div>
+        <div class="footer">
+            <div class="copyright">Copyright 2021</div>
+            <div class="design">Designed By OMAR</div>
+        </div>
+    </div>
+</body>
+
+</html>

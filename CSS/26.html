@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Assignments</title>
+    <style>
+      .main {
+        width: 400px;
+        list-style: none;
+      }
+      
+      .html {
+        background-color: #eee;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .html li {
+        background-color: #fff;
+        padding: 5px;
+        margin: 5px;
+      }
+      
+      .css {
+        background-color: #eee;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .css li {
+        background-color: #fff;
+        padding: 5px;
+        margin: 5px;
+      }
+      
+      .js {
+        background-color: #eee;
+        padding: 10px;
+      }
+      
+      .js li {
+        list-style: none;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        background-color: white;
+        padding: 5px;
+        padding-left: 25px;
+        margin-left: -40px;
+        margin-top: 10px;
+      }
+      
+      .js li::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="main">
+      <li class="html">
+        HTML
+        <ol type="1" start="10">
+          <li>Slim</li>
+          <li>Pugjs</li>
+          <li>HAML</li>
+        </ol>
+      </li>
+      <li class="css">
+        CSS
+        <ol type="I" start="10">
+          <li>SASS</li>
+          <li>LESS</li>
+          <li>PostCSS</li>
+        </ol>
+      </li>
+      <li class="js">
+        JavaScript
+        <ul>
+          <li>Vuejs</li>
+          <li>Sveltejs</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

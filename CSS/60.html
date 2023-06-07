@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Try NOT to forget transform-style and backface-visibility */
+        /* If you want to change the flip direction change rotateY to rotateX in BOTH div:hover & div::after*/
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        div:hover {
+            transform: rotateY(180deg);
+        }
+
+        div::before,
+        div::after {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            backface-visibility: hidden;
+        }
+
+        div::before {
+            content: 'Front';
+            background-color: cyan;
+        }
+
+        div::after {
+            content: 'Back';
+            background-color: rgb(255, 0, 200);
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

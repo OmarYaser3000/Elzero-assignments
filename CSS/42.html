@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            background-color: #dbdbdb;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content:space-between;
+            padding: 10px;
+        }
+
+        .parent div {
+            background-color: rgb(87, 103, 139);
+            color: white;
+            font-family: sans-serif;
+            width: 190px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one {
+            height: 50px;
+            order: 1;
+        }
+
+        .two {
+            height: 150px;
+            order: -1;
+        }
+
+        .three {
+            height: 50px;
+            order: -2;
+        }
+
+        .four {
+            height: 150px;
+            order: 0;
+        }
+
+        .five {
+            height: 150px;
+            order: -3;
+        }
+
+        .six {
+            height: 150px;
+            order: -4;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+      </div>
+</body>
+</html>

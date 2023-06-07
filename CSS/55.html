@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #eee;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 30px;
+            border-radius: 50%;
+        }
+
+        div::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            z-index: -3;
+            border: 10px solid;
+            border-color: rgb(255, 0, 149) rgb(255, 0, 149) rgb(255, 0, 149) transparent;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        div::after {
+            content: '';
+            width: 220px;
+            height: 220px;
+            z-index: -3;
+            border: 10px solid;
+            border-color: rgb(0, 110, 255) transparent rgb(0, 110, 255) rgb(0, 110, 255);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        div:hover::before {
+            animation-name: turn-clockwise;
+            animation-duration: 1s;
+        }
+
+        div:hover::after {
+            animation-name: turn-clockwise;
+            animation-duration: 1s;
+            animation-delay: 1s;
+        }
+
+        @keyframes turn-clockwise {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>Elzero</div>
+</body>
+
+</html>

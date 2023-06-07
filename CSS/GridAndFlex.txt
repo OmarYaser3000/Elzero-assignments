@@ -1,0 +1,112 @@
+.grid-container {
+    display: grid;
+    grid-template: /* Accepted values: strings specifying the grid structure */;
+    /* Shorthand for grid-template-rows, grid-template-columns, and grid-template-areas */
+
+    grid-template-rows: /* Accepted values: lengths, percentages, fr units, min-content, max-content, auto, or a combination */;
+    /* Defines the height of each grid row */
+
+    grid-template-columns: /* Accepted values: lengths, percentages, fr units, min-content, max-content, auto, or a combination */;
+    /* Defines the width of each grid column */
+
+    grid-template-areas: /* Accepted values: strings specifying named grid areas */;
+    /* Specifies named grid areas */
+
+    grid-row-gap: /* Accepted values: lengths, percentages, or normal */;
+    /* Specifies the size of the gap between grid rows */
+
+    grid-column-gap: /* Accepted values: lengths, percentages, or normal */;
+    /* Specifies the size of the gap between grid columns */
+
+    grid-gap: /* Accepted values: lengths, percentages, or normal */;
+    /* Shorthand for grid-row-gap and grid-column-gap */
+
+    grid-auto-rows: /* Accepted values: lengths, percentages, min-content, max-content, auto, or a combination */;
+    /* Defines the height of automatically-generated grid rows */
+
+    grid-auto-columns: /* Accepted values: lengths, percentages, min-content, max-content, auto, or a combination */;
+    /* Defines the width of automatically-generated grid columns */
+
+    grid-auto-flow: /* Accepted values: row, column, dense, or a combination */;
+    /* Specifies how auto-placed items are inserted into the grid */
+
+    justify-items: /* Accepted values: start, end, center, stretch */;
+    /* Aligns grid items along the inline (row) axis */
+
+    align-items: /* Accepted values: start, end, center, stretch */;
+    /* Aligns grid items along the block (column) axis */
+
+    justify-content: /* Accepted values: start, end, center, space-between, space-around, space-evenly */;
+    /* Aligns grid items along the inline (row) axis when there is extra space */
+
+    align-content: /* Accepted values: start, end, center, space-between, space-around, stretch */;
+    /* Aligns grid tracks along the block (column) axis when there is extra space */
+  }
+
+  .grid-item {
+    grid-area: /* Accepted values: grid area names, row and column lines, or a combination */;
+    /* Places a grid item into a grid cell or area */
+
+    order: /* Accepted values: integer values */;
+    /* Specifies the visual order of grid items */
+
+    grid-row: /* Accepted values: grid line numbers, grid span, or a combination */;
+    /* Places a grid item on specific grid rows */
+
+    grid-column: /* Accepted values: grid line numbers, grid span, or a combination */;
+    /* Places a grid item on specific grid columns */
+
+    grid-row-start: /* Accepted values: grid line number */;
+    /* Specifies the starting grid row for a grid item */
+
+    grid-row-end: /* Accepted values: grid line number */;
+    /* Specifies the ending grid row for a grid item */
+
+    grid-column-start: /* Accepted values: grid line number */;
+    /* Specifies the starting grid column for a grid item */
+
+    grid-column-end: /* Accepted values: grid line number */;
+    /* Specifies the ending grid column for a grid item */
+  }
+
+
+  .flex-container {
+    display: flex;
+    flex-direction: /* Accepted values: row, row-reverse, column, column-reverse */;
+    /* Specifies the direction of flex items */
+
+    flex-wrap: /* Accepted values: nowrap, wrap, wrap-reverse */;
+    /* Specifies whether flex items should wrap or not */
+
+    flex-flow: /* Accepted values: any combination of flex-direction and flex-wrap values */;
+    /* Shorthand for flex-direction and flex-wrap */
+
+    justify-content: /* Accepted values: flex-start, flex-end, center, space-between, space-around, space-evenly */;
+    /* Aligns flex items along the main axis when there is extra space */
+
+    align-items: /* Accepted values: stretch, flex-start, flex-end, center, baseline */;
+    /* Aligns flex items along the cross axis */
+
+    align-content: /* Accepted values: flex-start, flex-end, center, space-between, space-around, stretch */;
+    /* Aligns flex lines along the cross axis when there is extra space */
+  }
+
+  .flex-item {
+    flex-grow: /* Accepted values: non-negative number */;
+    /* Specifies the ability of a flex item to grow */
+
+    flex-shrink: /* Accepted values: non-negative number */;
+    /* Specifies the ability of a flex item to shrink */
+
+    flex-basis: /* Accepted values: lengths, percentages, auto, or content */;
+    /* Specifies the initial size of a flex item */
+
+    order: /* Accepted values: integer values */;
+    /* Specifies the visual order of flex items */
+
+    align-self: /* Accepted values: auto, stretch, flex-start, flex-end, center, baseline */;
+    /* Overrides the align-items value for a single flex item */
+
+    justify-self: /* Accepted values: auto, flex-start, flex-end, center, baseline */;
+    /* Overrides the justify-content value for a single flex item */
+  }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            display: flex;
+            background-color: #dbdbdb;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content:space-between;
+            padding: 10px;
+        }
+
+        .parent div {
+            background-color: rgb(17, 146, 129);
+            color: white;
+            font-family: sans-serif;
+            height: 50px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one {
+            align-self: flex-end;
+        }
+
+        .two {
+            align-self: flex-start;
+            width: 300px;
+        }
+
+        .three {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+      </div>
+</body>
+</html>

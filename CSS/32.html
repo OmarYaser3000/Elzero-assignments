@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Assignments</title>
+    <style>
+      p {
+        width: 400px;
+        height: 50px;
+        margin: auto;
+        margin-bottom: 10px;
+        background-color: #e7e7e7;
+        padding: 10px;
+        position: relative;
+        line-height: 50px;
+        border-style: solid;
+        border-color: rgb(216, 37, 141);
+        border-width: 0 0 0 4px;
+        font-family: sans-serif;
+      }
+      
+      p::before {
+        content: attr(data-person);
+        background-color: #d1caca;
+        position: absolute;
+        width: 60px;
+        height: 40px;
+        border-width: 0 3px 0 0;
+        text-align: center;
+        left: -45px;
+        padding: 5px 10px;
+        line-height: 40px;
+        margin-left: -60px;
+        margin-right: 20px;
+      }
+      
+      p::after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent rgb(216, 37, 141) transparent transparent;
+        position: absolute;
+        left: -24px;
+        top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+    <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+    <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+  </body>
+</html>

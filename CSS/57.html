@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --main-color: rgb(16, 163, 126);
+        }
+
+        h1 {
+            width: 150px;
+            height: 60px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: var(--main-color);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        h1::before {
+            content: '';
+            width: 5px;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            left: 10px;
+            transform: skewX(20deg);
+        }
+
+        h1::after {
+            content: '';
+            width: 25px;
+            height: 100%;
+            background-color: var(--main-color);
+            position: absolute;
+            left: -15px;
+            transform: skewX(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elzero</h1>
+</body>
+
+</html>

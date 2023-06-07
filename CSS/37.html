@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            font-family: sans-serif;
+        }
+
+        .parent {
+            background-color: #eee;
+            width: 300px;
+            margin: auto;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            transition: margin-top 0.5s;
+        }
+        
+        .parent:hover {
+            margin-top: 0;
+            
+        }
+        
+        .child {
+            background-color: #cfcfcf;
+            padding: 15px;
+            margin-top: 10px;
+            text-align: center;
+            transition: margin-top 0.5s 0.5s;
+        }
+
+        .child:hover {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Will Go Up On Hover in Half Second
+        <div class="child">
+            Will Go Down After Half Second
+        </div>
+    </div>
+</body>
+</html>

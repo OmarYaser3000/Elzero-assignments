@@ -1,0 +1,8 @@
+<input type="range" min="100" max="500" value="450" step="50" oninput="showSliderValue(this.value)">
+<output id="sliderValue">450</output>
+
+<script>
+  function showSliderValue(value) {
+    document.getElementById("sliderValue").textContent = value;
+  }
+</script>

@@ -1,0 +1,55 @@
+<body>
+    <form method="get">
+        <input type="text" name="token" id="get" hidden value="b92f1fc2fce391ad7af633723afd3055">
+        <br>
+        <label for="mail">Email</label>
+        <br>
+        <input type="text" name="mail" id="mail" value="o@o.com" readonly>
+        <br>
+        <label for="user">Username</label>
+        <br>
+        <input type="text" name="user" id="user" autofocus minlength="5" maxlength="20" required>
+        <br>
+        <label for="skill">Skills</label>
+        <br>
+        <select multiple id="skill" name="skill">
+            <option value="problem-solving" selected>Problem Solving</option>
+            <option value="logical-thinking">Logical Thinking</option>
+            <option value="advanced-search">Advanced Search</option>
+            <option value="analysis">Analysis</option>
+            <option value="planning">Planning</option>
+        </select>
+        <br>
+        <label for="job">Job</label>
+        <br>
+        <select id="job" name="job">
+            <option value="master" selected>Scrum Master</option>
+            <option value="manager">Project Manager</option>
+            <option value="analyst">Business Analyst</option>
+            <option value="back-end">Back-End Developer</option>
+            <option value="front-end">Front-End Developer</option>
+        </select>
+        <br>
+        <label for="book">Select Book:</label>
+        <select name="book">
+            <optgroup label="PHP">
+                <option value="5">v5.0</option>
+                <option value="6">v6.0</option>
+                <option value="7">v7.0</option>
+            </optgroup>
+            <optgroup label="Python">
+                <option value="2">v2.0</option>
+                <option value="3">v3.0</option>
+                <option value="3.9">v3.9</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="brief">Brief:</label>
+        <br>
+        <textarea name="brief" id="brief" cols="60" rows="15" placeholder="Write Here Why You Want To Learn Programming"></textarea>
+        <br>
+        <input type="reset" value="Empty">
+        <input type="submit" value="Send">
+        <br>
+    </form>
+</body>
