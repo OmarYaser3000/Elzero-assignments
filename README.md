@@ -3,7 +3,7 @@
 This is a repo where I put my solutions to the assignments created by Elzero Web School.
 This will contain all the assignments for the HTML, CSS & JS courses.
 
-You can find everything about the courses, assignments & anything [here](https://elzero.org/)
+You can find everything about the courses, assignments & anything [here](https://elzero.org/).
 
 > This repo is not completed yet.
 
