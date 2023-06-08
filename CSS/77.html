@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .arrow {
+            margin: 40px;
+            padding: 20px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .left::before,
+        .right::before,
+        .bottom::before,
+        .top::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border: 15px solid;
+            position: absolute;
+        }
+
+        .left::before {
+            left: -29px;
+            top: 15px;
+            border-color: transparent #eee transparent transparent;
+        }
+
+        .right::before {
+            right: -29px;
+            top: 15px;
+            border-color: transparent transparent transparent #eee;
+        }
+
+        .bottom::before {
+            left: calc(50% - 15px);
+            top: 58px;
+            border-color: #eee transparent transparent transparent;
+        }
+
+        .top::before {
+            left: calc(50% - 15px);
+            top: -29px;
+            border-color: transparent transparent #eee transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="arrow top">Elzero</div>
+    <div class="arrow right">Elzero</div>
+    <div class="arrow bottom">Elzero</div>
+    <div class="arrow left">Elzero</div>
+</body>
+
+</html>
