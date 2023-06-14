@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Assignment 02
+      let h1Element = document.createElement("h1");
+      h1Element.innerHTML = "Elzero";
+      document.body.appendChild(h1Element);
+      h1Element.style.color = "blue";
+      h1Element.style.fontSize = "80px";
+      h1Element.style.fontWeight = "bold";
+      h1Element.style.textAlign = "center";
+      h1Element.style.fontFamily = "Arial";
+
+      // Assignment 03
+      console.log(
+        "%cElzero %cWeb %cSchool",
+        "font-size: 40px; color: red;",
+        "font-size: 40px; color: green;",
+        "font-size: 40px; color: white; background-color: blue;"
+      );
+
+      // Assignment 04
+      console.group("Group 1");
+      console.log("Message 01");
+      console.log("Message 02");
+      console.group("Child Group");
+      console.log("Message 01");
+      console.log("Message 02");
+      console.group("Grand Child Group");
+      console.log("Message 01");
+      console.log("Message 02");
+      console.groupEnd();
+      console.group("Group 2");
+      console.log("Message 01");
+      console.log("Message 02");
+      console.groupEnd();
+      // Assignment 05
+      let myArray = [1, 2, 3, 4, 5];
+      console.table(myArray);
+
+      // Assignment 06
+
+      /*
+      console.log("Iam In Console");
+      document.write("Iam In Page");
+      */
+      //  or
+      //console.log("Iam In Console");
+      //document.write("Iam In Page");
+    </script>
+  </body>
+</html>
