@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(() => {
+        let el = document.createElement("div");
+        el.innerHTML = `
+      <h2>Welcome</h2>
+      <p>Welcome to Elzero Web School</p>
+      <button>X</button>
+      `;
+        el.style.cssText = `
+      width: 700px;
+      background-color: #eee;
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      `;
+        let btn = el.querySelector("button");
+        btn.style.cssText = `
+      position: absolute;
+      background-color: red;
+      top: -10px;
+      right: -10px;
+      border-radius: 50%;
+      `;
+
+        btn.addEventListener("click", () => {
+          el.remove();
+        });
+        document.body.append(el);
+      }, 5000);
+    </script>
+  </body>
+</html>

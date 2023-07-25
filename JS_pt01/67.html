@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="number" name="dollar" placeholder="USD Dollar" min="0" />
+      <div class="result">{0} USD Dollar = {0} Egyptian Pound</div>
+    </form>
+    <script>
+      let field = document.forms[0].children[0];
+      let res = document.getElementsByClassName("result")[0];
+      let egbValue = 0;
+
+      field.addEventListener("input", () => {
+        let usdValue = field.value;
+        egbValue = usdValue * 15.6;
+        let final = egbValue.toFixed(2);
+        // console.log(final);
+        res.textContent = `{${usdValue}} USD Dollar = {${final}} Egyptian Pound`;
+      });
+    </script>
+  </body>
+</html>

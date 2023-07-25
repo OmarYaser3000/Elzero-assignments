@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" value="" />
+    </div>
+
+    <div class="preview"></div>
+    <script>
+      const input = document.querySelector("input");
+      const preview = document.querySelector(".preview");
+
+      input.addEventListener("input", (e) => {
+        console.log("e: ", e.target.value);
+        preview.innerHTML = e.target.value;
+      });
+    </script>
+  </body>
+</html>

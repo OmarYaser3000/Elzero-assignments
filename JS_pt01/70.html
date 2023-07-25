@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .results {
+        margin: 40px auto;
+        max-width: 750px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .results section,
+      .results div {
+        background-color: orangered;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        flex-basis: 30%;
+        margin: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input
+        type="number"
+        name="elements"
+        class="input"
+        placeholder="Number Of Elements" />
+      <input
+        type="text"
+        name="texts"
+        class="input"
+        placeholder="Elements Text" />
+      <select name="type" class="input">
+        <option value="Div">Div</option>
+        <option value="Section">Section</option>
+      </select>
+      <input type="submit" name="create" value="Create" />
+      </form>
+      <div class="results"></div>
+
+      <script>
+        // HTML elements
+        let form = document.forms[0];
+        let number = document.querySelector("[type='number']");
+        let text = document.querySelector("[type='text']");
+        let selectElement = document.getElementsByTagName("select")[0];
+        let results = document.getElementsByClassName("results")[0];
+        let btn = document.querySelector("[type=submit]");
+        // styling
+        form.style.cssText = `
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 0 auto;
+        `
+
+        text.style.cssText = `
+        padding: 5px;
+        margin-bottom: 10px
+        `
+
+        number.style.cssText = `
+        padding: 5px;
+        margin-bottom: 10px
+        `
+        selectElement.style.cssText = `
+        padding: 5px;
+        margin-bottom: 10px
+        `
+
+        btn.style.cssText = `
+        padding: 10px;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        color: #fff
+        `
+        // Action
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          results.innerHTML = "";
+          let x = number.value;
+          let str = text.value;
+          let selectedOption =
+            selectElement.options[selectElement.selectedIndex];
+          let el = selectedOption.value;
+          for (let i = 0; i < x; i++) {
+            final = document.createElement(el);
+            final.setAttribute("class", `box`);
+            final.setAttribute("title", `element`);
+            final.setAttribute("id", `id-${i + 1}`);
+            final.innerText = str;
+            final.style.cssText = `
+            font-size: 20px;
+
+            `;
+            results.appendChild(final);
+          }
+        });
+      </script>
+    </form>
+  </body>
+</html>

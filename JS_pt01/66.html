@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+    <div>
+      <img decoding="async" src="#" alt="" />
+    </div>
+
+    <script>
+      let imageList = document.querySelectorAll("img");
+      console.log(imageList);
+      for (let i = 0; i < imageList.length; i++) {
+        imageList[
+          i
+        ].src = `https://elzero.org/wp-content/themes/elzero/imgs/logo.png`;
+        imageList[i].alt = "Elzero Logo";
+      }
+    </script>
+  </body>
+</html>

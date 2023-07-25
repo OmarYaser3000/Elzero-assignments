@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let value = window.prompt("Print Number From - To", "Example: 5-20");
+      let numbers = value.split("-");
+      let num1 = parseInt(numbers[0]);
+      let num2 = parseInt(numbers[1]);
+      // console.log(num1);
+      // console.log(num2);
+
+      if (num1 < num2) {
+        for (let i = num1; i <= num2; i++) {
+          console.log(i);
+        }
+      } else {
+        for (let i = num2; i <= num1; i++) {
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>

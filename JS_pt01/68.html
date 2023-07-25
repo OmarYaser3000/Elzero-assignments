@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="one" title="two">Two</div>
+    <div class="two" title="one">One</div>
+
+    <script>
+      let firstDiv = document.getElementsByTagName("div")[0];
+      let secondDiv = document.getElementsByTagName("div")[1];
+      let firstContent = firstDiv.innerText;
+      let secondContent = secondDiv.innerText;
+      let firstTitle = firstDiv.title;
+      let secondTitle = secondDiv.title;
+
+      firstDiv.title = secondTitle;
+      secondDiv.title = firstTitle;
+
+      firstDiv.innerText = secondContent;
+      secondDiv.innerText = `${firstContent} 2`;
+    </script>
+  </body>
+</html>

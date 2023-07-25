@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap"
+      rel="stylesheet" />
+    <!-- styling -->
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 0 auto;
+      }
+
+      label {
+        font-size: 18px;
+        font-family: "Cairo";
+        font-weight: bold;
+      }
+
+      select {
+        border-radius: 5px;
+        padding: 2px;
+        font-family: "Cairo";
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .content {
+        background-color: rebeccapurple;
+        width: 70%;
+        margin: 0 auto;
+        color: #fff;
+        padding: 10px;
+        margin-top: 40px;
+        border-radius: 10px;
+        text-align: center;
+        font-family: "Open Sans";
+        font-weight: 300;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <!-- fonts -->
+      <label for="fonts">Fonts:</label>
+      <select id="fonts" name="fonts">
+        <option value="Open Sans" selected>Open Sans</option>
+        <option value="cairo">cairo</option>
+        <option value="roboto">roboto</option>
+      </select>
+      <!-- colors -->
+      <label for="colors">Colors:</label>
+      <select id="colors" name="colors">
+        <option value="rebeccapurple" selected>rebeccapurple</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        <option value="pink">pink</option>
+        <option value="purple">purple</option>
+      </select>
+      <!-- font size -->
+      <label for="size">Font Size:</label>
+      <select id="size" name="size">
+        <option value="16" selected>16</option>
+        <option value="18">18</option>
+        <option value="20">20</option>
+        <option value="22">22</option>
+        <option value="24">24</option>
+        <option value="26">26</option>
+        <option value="28">28</option>
+        <option value="30">30</option>
+      </select>
+    </form>
+    <div class="content">
+      <p>This is content</p>
+    </div>
+
+    <script>
+      // get elements
+      let content = document.querySelector(".content");
+      let selectFont = document.getElementById("fonts");
+      let selectColor = document.getElementById("colors");
+      let selectSize = document.getElementById("size");
+      let btn = document.getElementsByTagName("button")[0];
+
+      // saving to local storage
+      selectFont.addEventListener("change", () => {
+        window.localStorage.setItem("font", selectFont.value);
+        content.style.fontFamily = window.localStorage.getItem("font");
+      });
+      selectColor.addEventListener("change", () => {
+        window.localStorage.setItem("color", selectColor.value);
+        content.style.backgroundColor = window.localStorage.getItem("color");
+      });
+      selectSize.addEventListener("change", () => {
+        window.localStorage.setItem("font size", selectSize.value);
+        content.style.fontSize = `${parseInt(
+          window.localStorage.getItem("font size")
+        )}px`;
+      });
+
+      // getting & setting values from local storage
+      if (window.localStorage.getItem("font")) {
+        content.style.fontFamily = window.localStorage.getItem("font");
+      }
+      if (window.localStorage.getItem("color")) {
+        content.style.backgroundColor = window.localStorage.getItem("color");
+      }
+      if (window.localStorage.getItem("font size")) {
+        content.style.fontSize = `${parseInt(
+          window.localStorage.getItem("font size")
+        )}px`;
+      }
+
+      // setting the values from local storage to select box values
+      if (window.localStorage.getItem("font")) {
+        selectFont.value = window.localStorage.getItem("font");
+      }
+      if (window.localStorage.getItem("color")) {
+        selectColor.value = window.localStorage.getItem("color");
+      }
+      if (window.localStorage.getItem("font size")) {
+        selectSize.value = parseInt(window.localStorage.getItem("font size"));
+      }
+    </script>
+  </body>
+</html>
