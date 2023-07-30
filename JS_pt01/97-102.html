@@ -25,6 +25,12 @@
       // 04
       let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
       // match http:// with s being optional.
+      // Non-capturing group that is optional for matching the www or the subdomain part.
+      // Capturing group to match the main domain.
+      // matching the dot character and one or more word character.
+      // optional non-capturing group for matching a dot character and one or more word character.
+      // matching optional / character and zero or more of any character.
+
       // 05
       let re4 = /\d{2}(\/| - | )\d{2}(\/| - | )\d{2,4}/g;
       let date1 = "25/10/1982";
