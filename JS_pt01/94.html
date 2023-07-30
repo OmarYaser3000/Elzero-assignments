@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
+      let chars = ["A", "B", "C", 20, "D", "E", 10, 15, 6];
+      // let chars = ["Z", "Y", "A", "D", "E", 10, 1];
+
+      // making two arrays for ordering
+      const filteredChars = chars.filter((n) => typeof n === "string");
+      const filteredNums = chars.filter((n) => typeof n === "number");
+      // merging the two arrays
+      let newArr = filteredNums.concat(filteredChars);
+
+      // getting the index of the first character after ordering
+      let firstCharIndex = filteredNums.length;
+
+      // start from the first index on the new array, copy from the first chracter & copy only characters as many as the available numbers
+      console.log(newArr.copyWithin(0, firstCharIndex, firstCharIndex * 2));
+
+      // Needed Output
+      // ['A', 'B', 'C', 'A', 'B', 'C', 'D', 'E']
+      // ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E']
+      // ["Z", "Y", "Z", "Y", "A", "D", "E"]
+    </script>
+  </body>
+</html>

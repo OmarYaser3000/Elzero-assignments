@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
+
+      let newSet = new Set(myFriends);
+      let orderedArray = Array.from(newSet).sort();
+
+      console.log(orderedArray);
+      // Needed Output
+      // (4) ['Ahmed', 'Mahmoud', 'Osama', 'Sayed']
+    </script>
+  </body>
+</html>

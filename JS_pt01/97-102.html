@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 01
+      let re1 = /\d{4}:\w{2}\d:\d{4}:\d{4}:\d{4}:\d{4}:\d{4}:\d{4}/g;
+      let ip = "2001:db8:3333:4444:5555:6666:7777:8888";
+      console.log(ip.match(re1));
+
+      // 02
+      let re2 = /os\d*o/gi;
+      let specialNames = "Os10O OsO Os100O Osa100O Os1000 Os100m";
+      console.log(specialNames.match(re2));
+
+      // 03
+      let re3 = /\+\(\d{3}\)\-\d{3} \(\d{4}\)/g;
+      let phone = "+(995)-123 (4567)";
+      console.log(phone.match(re3));
+
+      // 04
+      let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
+      // match http:// with s being optional.
+      // 05
+      let re4 = /\d{2}(\/| - | )\d{2}(\/| - | )\d{2,4}/g;
+      let date1 = "25/10/1982";
+      let date2 = "25 - 10 - 1982";
+      let date3 = "25 10 1982";
+      let date4 = "25 10 82";
+      console.log(date1.match(re4)); // "25/10/1982"
+      console.log(date2.match(re4)); // "25 - 10 - 1982"
+      console.log(date3.match(re4)); // "25 10 1982"
+      console.log(date4.match(re4)); // "25 10 82"
+
+      // 06
+      let re6 = /(https?:\/\/)?(\w+\.)?\w+.+/g;
+
+      let url1 = "elzero.org";
+      let url2 = "http://elzero.org";
+      let url3 = "https://elzero.org";
+      let url4 = "https://www.elzero.org";
+      let url5 = "https://www.elzero.org:8080/articles.php?id=100&cat=topics";
+
+      console.log(url1.match(re6));
+      console.log(url2.match(re6));
+      console.log(url3.match(re6));
+      console.log(url4.match(re6));
+      console.log(url5.match(re6));
+    </script>
+  </body>
+</html>

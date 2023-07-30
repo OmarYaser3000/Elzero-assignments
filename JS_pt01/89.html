@@ -6,9 +6,11 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- for assignment 08 -->
-    <!-- <div id="elzero">Object</div> -->
-    <!-- ends here -->
-    <script src="17.js"></script>
+    <script>
+      let setOfNumbers = new Set([10]);
+      setOfNumbers.add(20).add(setOfNumbers.size);
+      console.log(setOfNumbers);
+      console.log(Array.from(setOfNumbers)[2]);
+    </script>
   </body>
 </html>
