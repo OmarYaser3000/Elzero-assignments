@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let birthday = new Date("September 29, 1999 00:00:00Z");
+      let dateNow = new Date();
+      let age = dateNow - birthday;
+      console.log(`${Math.round(age / 1000)} Seconds`);
+      console.log(`${Math.round(age / 1000 / 60)} Minutes`);
+      console.log(`${Math.round(age / 1000 / 60 / 60)} Hours`);
+      console.log(`${Math.round(age / 1000 / 60 / 60 / 24)} Days`);
+      console.log(`${Math.round(age / 1000 / 60 / 60 / 24 / 30)} Months`);
+      console.log(`${Math.round(age / 1000 / 60 / 60 / 24 / 30 / 12)} Years`);
+
+      // 02
+      let tenYearsInMillis = 10 * 365 * 24 * 60 * 60 * 1000;
+      let yearTen = new Date("Jan 1, 1980 00:00:00");
+      yearTen.setSeconds(1);
+      console.log(yearTen);
+
+      // 03
+      console.log("##############################");
+      console.log("##############################");
+      let currentDateSec = new Date();
+      currentDateSec.setDate(0);
+      console.log(currentDateSec);
+      // ##############################
+      // ##############################
+      const currentDate = new Date();
+      currentDate.getMonth();
+
+      if (currentDate === 0) {
+        previousMonth.setFullYear(previousMonthDate.getFullYear() - 1);
+      }
+
+      currentDate.setDate(0);
+      const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const previousMonthName = monthNames[currentDate.getMonth()];
+      const lastDay = currentDate.getDate();
+      console.log(
+        `Previous Month Is ${previousMonthName} And Last Day Is ${lastDay}`
+      );
+
+      // 04
+      console.log("##############################");
+      console.log("##############################");
+      let birthdayOne = new Date("Sep 29, 1999 00:00:00");
+      console.log(birthdayOne);
+
+      let birthdayTwo = new Date();
+      birthdayTwo.setTime(938552400000);
+      console.log(birthdayTwo);
+
+      let birthdayThree = new Date();
+      birthdayThree.setFullYear(1999, 8, 29);
+      birthdayThree.setHours(0, 0, 0);
+      console.log(birthdayThree);
+    </script>
+  </body>
+</html>

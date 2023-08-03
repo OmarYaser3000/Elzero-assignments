@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // using Promises
+      // ##############
+      // const getData = (apiLink) => {
+      //   return new Promise((resolve, reject) => {
+      //     // console.log(this);
+      //     let req = new XMLHttpRequest();
+      //     req.onloadend = () => {
+      //       if (req.readyState === 4 && req.status === 200) {
+      //         resolve(JSON.parse(req.responseText));
+      //       } else {
+      //         reject(Error("No Data Found"));
+      //       }
+      //     };
+
+      //     req.open("GET", apiLink);
+      //     req.send();
+      //   });
+      // };
+
+      // getData("http://127.0.0.1:5500/JS_pt01/promise-data.json")
+      //   .then((res) => {
+      //     res.length = 5;
+      //     return res;
+      //   })
+      //   .then((res) => {
+      //     let div = document.createElement("div");
+      //     for (let i = 0; i < res.length; i++) {
+      //       div.innerHTML += `
+      //       <h3>${res[i].title}</h3>
+      //       <p>${res[i].description}</p>
+      //     `;
+      //     }
+      //     document.body.appendChild(div);
+      //   });
+      // ########################################################
+      // ########################################################
+      // Using Fetch api
+      // ##############
+      fetch("http://127.0.0.1:5500/JS_pt01/promise-data.json")
+        // The fetch function returns a Response object, not the actual data you expect.
+        .then((res) => res.json())
+        .then((res) => {
+          res.length = 5;
+          return res;
+        })
+        .then((res) => {
+          let div = document.createElement("div");
+          for (let i = 0; i < res.length; i++) {
+            div.innerHTML += `
+            <h3>${res[i].title}</h3>
+            <p>${res[i].description}</p>
+          `;
+          }
+          document.body.appendChild(div);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let dateOne = new Date();
+      // console.log(dateOne);
+      const startTime = performance.now();
+      for (let i = 0; i < 50000; i++) {
+        console.log(i);
+      }
+      const endTime = performance.now();
+      const timeTaken = endTime - startTime;
+      // let dateTwo = new Date();
+      console.log(`"Loop Took ${Math.round(timeTaken)} Milliseconds."`);
+    </script>
+  </body>
+</html>

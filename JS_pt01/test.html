@@ -7,18 +7,28 @@
   </head>
   <body>
     <div>
-      <input type="text" value="" />
+      <!-- HTML -->
+      <input type="text" id="numberInput" value="123" />
+      <button onclick="convertToInt()">Convert to Integer</button>
     </div>
 
     <div class="preview"></div>
     <script>
-      const input = document.querySelector("input");
-      const preview = document.querySelector(".preview");
+      const octalStr = "012";
+      const parsedIntDefault = parseInt(octalStr);
+      const parsedIntRadix = parseInt(octalStr, 8);
 
-      input.addEventListener("input", (e) => {
-        console.log("e: ", e.target.value);
-        preview.innerHTML = e.target.value;
-      });
+      console.log(parsedIntDefault); // Output: 12
+      console.log(parsedIntRadix); // Output: 10
+
+      // JavaScript
+      function convertToInt() {
+        const inputElement = document.getElementById("numberInput");
+        const inputValue = inputElement.value;
+        const parsedInt = parseInt(inputValue, 10); // Explicitly set radix to 10 (decimal).
+
+        console.log(parsedInt); // Output: 123 (integer)
+      }
     </script>
   </body>
 </html>

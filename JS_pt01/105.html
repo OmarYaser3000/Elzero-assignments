@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Edit The Class
+      class User {
+        #c;
+
+        constructor(username, card) {
+          this.u = username;
+          this.#c = card;
+        }
+
+        // showData() {
+        //   let cAsString = this.#c.toString().split("");
+        //   for (let i = 0; i < cAsString.length; i++) {
+        //     if (i % 5 === 0 && cAsString[i - 1] !== "-" && i !== 0) {
+        //       cAsString.splice(i - 1, 0, "-");
+        //     }
+        //   }
+        //   return `Hello ${this.u} Your Credit Card Number Is ${cAsString.join(
+        //     ""
+        //   )}`;
+        // }
+
+        get showData() {
+          let cAsString = this.#c.toString();
+          // Remove all non-digit characters from the string
+          let digitsOnly = cAsString.replace(/\D/g, "");
+
+          // Apply the credit card format using regex
+          let formatted = digitsOnly.replace(/(\d{4})(?=\d)/g, "$1-");
+
+          return `Hello ${this.u} Your Credit Card Number Is ${formatted}`;
+        }
+      }
+
+      // Do Not Edit Anything Below
+
+      let userOne = new User("Osama", "1234-5678-1234-5678");
+      let userTwo = new User("Ahmed", "1234567812345678");
+      let userThree = new User("Ghareeb", 1234567812345678);
+
+      console.log(userOne.showData);
+      // Hello Osama Your Credit Card Number Is 1234-5678-1234-5678
+
+      console.log(userTwo.showData);
+      // Hello Ahmed Your Credit Card Number Is 1234-5678-1234-5678
+
+      console.log(userThree.showData);
+      // Hello Ghareeb Your Credit Card Number Is 1234-5678-1234-5678
+
+      console.log(userOne.c); // Prevent Accessing To Card Property Here
+      // Undefined
+    </script>
+  </body>
+</html>
