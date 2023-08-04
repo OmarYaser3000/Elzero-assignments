@@ -1,6 +1,6 @@
 # Elzero-assignments
 
-> This repo is not completed yet.
+> This repo is completed.
 
 This is a repo where I put my solutions to the assignments created by Elzero Web School.
 This will contain:-
